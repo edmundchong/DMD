@@ -6,7 +6,7 @@ VMirror=0 #1 is enable, 0 is disable
 HMirror=1
 
 x=os.getcwd() #==dirty method, couldn't find dlls otherwise==
-os.chdir('C:\\MightexPolygon\\Drivers')
+os.chdir('C:\\DMD_drivers\\MightexPolygon')
 cdll.LoadLibrary('MT_Polygon400_SDK.dll')
 libc=CDLL('MT_Polygon400_SDK.dll')
 os.chdir(x)

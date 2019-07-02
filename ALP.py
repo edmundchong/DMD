@@ -8,7 +8,7 @@ import time
 from copy import deepcopy
 
 x=os.getcwd() #==dirty method, couldn't find dlls otherwise==
-os.chdir('C:\\git\\Olfalab_Voyeur_protocols_and_files\\Python\\Utilities\\Polygon\\Drivers')
+os.chdir('C:\\DMD_drivers\\ALP\\')
 cdll.LoadLibrary('alpV42.dll')
 libc=CDLL('alpV42.dll')
 os.chdir(x)
@@ -241,7 +241,7 @@ class DMD():
         
         PictureTime = stimon_time + stimoff_time #ALP-4.2: time between consecutive stim onsets
         
-        returnvalue = libc.AlpSeqTiming(self.alp_id, seq_id, stimon_time, PictureTime, 0, ALP_DEFAULT, ALP_DEFAULT)
+        returnvalue = libc.AlpSeqTiming(self.alp_id, seq_id, stimon_time, PictureTime, 0, 1000, ALP_DEFAULT)
         #print 'seq_timing with value: ' + str(returnvalue)
     
     def seq_upload(self,seq_id, ptn):
